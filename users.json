@@ -13,5 +13,10 @@
     "email": "bob@email.com",
     "password": "79f85187b0515d1e86563e0c65a57dca4b7ea304eeac8499aa73df9f4cd4e6531c7e3d2b55ae347619f22aaadc8ef7703dbe6c5acbeb42d3bcf9a4abf5b943e0.300e6a4bee90e80f",
     "id": "dfffe3f0"
+  },
+  {
+    "email": "test@test.co.uk",
+    "password": "97212dcb45d91256a4cd7cf3590c9a6ab9a8c2abe328dff9fbc733fcc0c2c09679eacb6d155706548e2eecdfd862294f17a5a6cf1c81880e8ef503faaa1a9336.2835f6b7e4b3ea09",
+    "id": "b22e6774"
   }
 ]
