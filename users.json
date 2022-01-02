@@ -18,5 +18,10 @@
     "email": "test@test.co.uk",
     "password": "97212dcb45d91256a4cd7cf3590c9a6ab9a8c2abe328dff9fbc733fcc0c2c09679eacb6d155706548e2eecdfd862294f17a5a6cf1c81880e8ef503faaa1a9336.2835f6b7e4b3ea09",
     "id": "b22e6774"
+  },
+  {
+    "email": "test@test.com",
+    "password": "3747c92f8626546be110acbcb2df21b33e28bb5ff759a6719cc3a58bc0c37d375b27b5923a9cf6db931270bf00eb67ed9c1867a150beeb0663354b260b1cd6e4.88aab278a2a806c6",
+    "id": "f5f7f7a5"
   }
 ]
