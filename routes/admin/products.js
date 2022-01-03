@@ -5,7 +5,7 @@ const productsRepo = require("../../repositories/products");
 const productsNewTemplate = require("../../views/admin/products/new");
 const productsIndexTemplate = require("../../views/admin/products/index");
 const productsEditTemplate = require("../../views/admin/products/edit");
-const { requireTitle, requirePrice } = require("./validators");
+const { requireTitle, requirePrice, requireImage } = require("./validators");
 const { handleErrors, requireAuth } = require("./middlewares");
 
 const router = express.Router();
@@ -27,12 +27,9 @@ router.post(
   "/admin/products/new",
   requireAuth,
   upload.single("image"),
-  [requireTitle, requirePrice],
+  [requireTitle, requirePrice, requireImage],
   handleErrors(productsNewTemplate),
   async (req, res) => {
-    if (!req.file) {
-      res.send("Image Required");
-    }
     const image = req.file.buffer.toString("base64");
     const { title, price } = req.body;
     await productsRepo.create({ title, price, image });

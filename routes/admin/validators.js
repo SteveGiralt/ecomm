@@ -1,4 +1,5 @@
 const { check } = require("express-validator");
+const req = require("express/lib/request");
 const usersRepo = require("../../repositories/users");
 
 module.exports = {
@@ -6,6 +7,15 @@ module.exports = {
     .trim()
     .isLength({ min: 5, max: 40 })
     .withMessage("Title must be between 5 and 40 characters"),
+  requireImage: check("image").custom((image, { req }) => {
+    if (!req.file) {
+      throw new Error("Please include an image");
+    }
+    if (image.length > 2000000) {
+      throw new Error("Files must be less than 2MB");
+    }
+    return true;
+  }),
   requirePrice: check("price")
     .trim()
     .toFloat()

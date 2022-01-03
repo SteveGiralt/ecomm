@@ -9,7 +9,7 @@ module.exports = ({ products }) => {
       });
       return `
       <tr>
-        <td>${product.title}</td>
+        <td><img src="data:image/png;base64, ${product.image}" height="50" width="50" /> ${product.title}</td>
         <td>${formattedPrice}</td>
         <td>
           <a href="/admin/products/${product.id}/edit">
